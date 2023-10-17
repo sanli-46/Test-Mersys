@@ -16,6 +16,8 @@ public class Elements extends Parent{
     private WebElement loginPassword;
     @FindBy(xpath = "//button[@aria-label='LOGIN']")
     private WebElement loginButton;
+    @FindBy(xpath = "//img[@class='avatar-mini ng-star-inserted']")
+    private WebElement homepageAvatar;
     @FindBy(xpath = "//ms-add-button[contains(@tooltip,'ADD')]//button")
     private WebElement plusButton;
     @FindBy(xpath = "//ms-table-menu/button")
@@ -29,22 +31,91 @@ public class Elements extends Parent{
     @FindBy(xpath = "//button[@type='submit']") // delete'in deletesi.
     private WebElement secDeleteButton;
     @FindBy(css = "ms-text-field[formcontrolname='name'] > input")
-    public WebElement nameInput;
+    private WebElement nameInput;
     @FindBy(css = "ms-text-field[formcontrolname='shortName'] > input")
-    public WebElement shortNameInput;
+    private WebElement shortNameInput;
     @FindBy(css = "ms-text-field[formcontrolname='order'] > input")
-    public WebElement orderInput;
+    private WebElement orderInput;
     @FindBy(css = "ms-save-button > button")
-    public WebElement saveButton;
+    private WebElement saveButton;
     @FindBy(css = "//input[@data-placeholder='Name']")
-    public WebElement searchNameLabel;
+    private WebElement searchNameLabel;
     @FindBy(css = "//input[@data-placeholder='Description']")
-    public WebElement searchDescriptionLabel;
+    private WebElement searchDescriptionLabel;
     @FindBy(css = "//input[@data-placeholder='Integration Code']")
-    public WebElement searchIntegrationCode;
+    private WebElement searchIntegrationCode;
     @FindBy(css = " (//mat-select[@role='combobox'])[1]")
-    public WebElement searchStageSelect;
+    private WebElement searchStageSelect;
 
+    public WebElement getLoginUsername() {
+        return loginUsername;
+    }
 
+    public WebElement getLoginPassword() {
+        return loginPassword;
+    }
 
+    public WebElement getLoginButton() {
+        return loginButton;
+    }
+
+    public WebElement getHomepageAvatar() {
+        return homepageAvatar;
+    }
+
+    public WebElement getPlusButton() {
+        return plusButton;
+    }
+
+    public WebElement getRippleButton() {
+        return rippleButton;
+    }
+
+    public WebElement getSearchButton() {
+        return searchButton;
+    }
+
+    public WebElement getEditButton() {
+        return editButton;
+    }
+
+    public WebElement getDeleteButton() {
+        return deleteButton;
+    }
+
+    public WebElement getSecDeleteButton() {
+        return secDeleteButton;
+    }
+
+    public WebElement getNameInput() {
+        return nameInput;
+    }
+
+    public WebElement getShortNameInput() {
+        return shortNameInput;
+    }
+
+    public WebElement getOrderInput() {
+        return orderInput;
+    }
+
+    public WebElement getSaveButton() {
+        return saveButton;
+    }
+
+    public WebElement getSearchNameLabel() {
+        return searchNameLabel;
+    }
+
+    public WebElement getSearchDescriptionLabel() {
+        return searchDescriptionLabel;
+    }
+
+    public WebElement getSearchIntegrationCode() {
+        return searchIntegrationCode;
+    }
+
+    public WebElement getSearchStageSelect() {
+        return searchStageSelect;
+    }
 }
