@@ -46,6 +46,12 @@ public class Elements extends Parent{
     private WebElement searchIntegrationCode;
     @FindBy(css = " (//mat-select[@role='combobox'])[1]")
     private WebElement searchStageSelect;
+    @FindBy(xpath = "//div[@class='mat-mdc-checkbox-touch-target']")
+    private WebElement subjectCategoriesBox;
+    @FindBy(xpath = "(//button[@role='switch'])[1]")
+    private WebElement positionActiveButton;
+    @FindBy(xpath = "(//button[@role='switch'])[8]")
+    private WebElement positionActiveButtonNGL;
 
     public WebElement getLoginUsername() {
         return loginUsername;
@@ -117,5 +123,17 @@ public class Elements extends Parent{
 
     public WebElement getSearchStageSelect() {
         return searchStageSelect;
+    }
+
+    public WebElement getSubjectCategoriesBox() {
+        return subjectCategoriesBox;
+    }
+
+    public WebElement getPositionActiveButton() {
+        return positionActiveButton;
+    }
+
+    public WebElement getPositionActiveButtonNGL() {
+        return positionActiveButtonNGL;
     }
 }

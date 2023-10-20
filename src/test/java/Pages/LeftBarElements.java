@@ -9,6 +9,8 @@ public class LeftBarElements extends Parent{
     public LeftBarElements() {
         PageFactory.initElements(BaseDriver.getDriver(),this);
     }
+
+    //**//
     @FindBy(xpath = "//span[text()='Human Resources']")
     private WebElement navHumanResources;
     @FindBy(xpath = "(//span[text()='Setup'])[3]")
@@ -19,6 +21,7 @@ public class LeftBarElements extends Parent{
     private WebElement chAttestations;
     @FindBy(xpath = "//span[text()='Position Categories']")
     private WebElement chPositionCategories;
+    //**//
     @FindBy(xpath = "(//span[text()='Setup'])[1]")
     private WebElement navSetup;
     @FindBy(xpath = "(//span[text()='Parameters'])[1]")
@@ -41,12 +44,14 @@ public class LeftBarElements extends Parent{
     private WebElement chLocations;
     @FindBy(xpath = "(//span[text()='Departments'])[1]")
     private WebElement chDepartments;
+    //**//
     @FindBy(xpath = "(//span[text()='Education'])[1]")
     private WebElement navEducations;
     @FindBy(xpath = "(//span[text()='Setup'])[5]")
     private WebElement chEdSetup;
     @FindBy(xpath = "//span[text()='Subject Categories']")
     private WebElement chSubjectCategories;
+    //**//
 
 
 
