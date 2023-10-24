@@ -31,9 +31,9 @@ public class Elements extends Parent {
     private WebElement searchButton;
     @FindBy(xpath = "(//ms-edit-button/button)[1]")
     private WebElement editButton;
-    @FindBy(xpath = "(//ms-delete-button/button)[1]")
+    @FindBy(css = "ms-delete-button>button:first-child")
     private WebElement deleteButton;
-    @FindBy(xpath = "//button[@type='submit']") // delete'in deletesi.
+    @FindBy(css = "button[type='submit']") // delete'in deletesi.
     private WebElement secDeleteButton;
     @FindBy(css = "ms-text-field[formcontrolname='name'] > input")
     private WebElement nameInput;
@@ -157,7 +157,6 @@ public class Elements extends Parent {
 
         clickMethod(deleteButton);
         clickMethod(secDeleteButton);
-
     }
 
     public void deleteItem1(String s) {
