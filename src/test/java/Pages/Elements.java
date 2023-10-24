@@ -1,15 +1,20 @@
 package Pages;
 
 import Utilities.BaseDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class Elements extends Parent{
+public class Elements extends Parent {
 
     public Elements() {
         PageFactory.initElements(BaseDriver.getDriver(), this);
     }
+
+    //mat-form-field//input[@data-placeholder='Name']
+
     @FindBy(xpath = "//input[@formcontrolname='username']")
     private WebElement loginUsername;
     @FindBy(xpath = "//input[@formcontrolname='password']")
@@ -38,7 +43,7 @@ public class Elements extends Parent{
     private WebElement orderInput;
     @FindBy(css = "ms-save-button > button")
     private WebElement saveButton;
-    @FindBy(css = "//input[@data-placeholder='Name']")
+    @FindBy(xpath = "//input[@data-placeholder='Name']")
     private WebElement searchNameLabel;
     @FindBy(css = "//input[@data-placeholder='Description']")
     private WebElement searchDescriptionLabel;
@@ -53,87 +58,113 @@ public class Elements extends Parent{
     @FindBy(xpath = "(//button[@role='switch'])[8]")
     private WebElement positionActiveButtonNGL;
 
-    public WebElement getLoginUsername() {
-        return loginUsername;
+    @FindBy(xpath = "//div[contains(text(),'successfully')]")
+    private WebElement successMessage;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code' ]//input")
+    private WebElement codeInput;
+
+
+    public WebElement getWebElement(String strElement) {
+        switch (strElement) {
+            case "plusButton": return this.plusButton;
+            case "saveButton": return this.saveButton;
+            case "nameInput": return this.nameInput;
+            case "shortNameInput": return this.shortNameInput;
+            case "orderInput": return this.orderInput;
+            case "editButton": return this.editButton;
+            case "searchButton": return this.searchButton;
+            case "searchNameLabel": return this.searchNameLabel;
+            case "successMessage": return this.successMessage;
+            case "deleteButton": return this.deleteButton;
+            case "secDeleteButton": return this.secDeleteButton;
+            case "codeInput": return this.codeInput;
+
+        }
+        return null;
     }
 
-    public WebElement getLoginPassword() {
-        return loginPassword;
+    public WebElement getLoginUsername() {return loginUsername;
     }
 
-    public WebElement getLoginButton() {
-        return loginButton;
+    public WebElement getLoginPassword() {return loginPassword;
     }
 
-    public WebElement getHomepageAvatar() {
-        return homepageAvatar;
+    public WebElement getLoginButton() {return loginButton;
     }
 
-    public WebElement getPlusButton() {
-        return plusButton;
+    public WebElement getHomepageAvatar() {return homepageAvatar;
     }
 
-    public WebElement getRippleButton() {
-        return rippleButton;
+    public WebElement getPlusButton() {return plusButton;
     }
 
-    public WebElement getSearchButton() {
-        return searchButton;
+    public WebElement getRippleButton() {return rippleButton;
     }
 
-    public WebElement getEditButton() {
-        return editButton;
+    public WebElement getSearchButton() {return searchButton;
     }
 
-    public WebElement getDeleteButton() {
-        return deleteButton;
+    public WebElement getEditButton() {return editButton;
     }
 
-    public WebElement getSecDeleteButton() {
-        return secDeleteButton;
+    public WebElement getDeleteButton() {return deleteButton;
     }
 
-    public WebElement getNameInput() {
-        return nameInput;
+    public WebElement getSecDeleteButton() {return secDeleteButton;
     }
 
-    public WebElement getShortNameInput() {
-        return shortNameInput;
+    public WebElement getNameInput() {return nameInput;
     }
 
-    public WebElement getOrderInput() {
-        return orderInput;
+    public WebElement getShortNameInput() {return shortNameInput;
     }
 
-    public WebElement getSaveButton() {
-        return saveButton;
+    public WebElement getOrderInput() {return orderInput;
     }
 
-    public WebElement getSearchNameLabel() {
-        return searchNameLabel;
+    public WebElement getSaveButton() {return saveButton;
     }
 
-    public WebElement getSearchDescriptionLabel() {
-        return searchDescriptionLabel;
+    public WebElement getSearchNameLabel() {return searchNameLabel;
     }
 
-    public WebElement getSearchIntegrationCode() {
-        return searchIntegrationCode;
+    public WebElement getSearchDescriptionLabel() {return searchDescriptionLabel;
     }
 
-    public WebElement getSearchStageSelect() {
-        return searchStageSelect;
+    public WebElement getSearchIntegrationCode() {return searchIntegrationCode;
     }
 
-    public WebElement getSubjectCategoriesBox() {
-        return subjectCategoriesBox;
+    public WebElement getSearchStageSelect() {return searchStageSelect;
     }
 
-    public WebElement getPositionActiveButton() {
-        return positionActiveButton;
+    public WebElement getSubjectCategoriesBox() {return subjectCategoriesBox;
     }
 
-    public WebElement getPositionActiveButtonNGL() {
-        return positionActiveButtonNGL;
+    public WebElement getPositionActiveButton() {return positionActiveButton;
+    }
+
+    public WebElement getPositionActiveButtonNGL() {return positionActiveButtonNGL;
+    }
+
+    public WebElement getsuccessMessage() {return successMessage;
+    }
+
+    public void deleteItem(String searchText) {
+        sendKeysMethod(searchNameLabel, searchText);
+        clickMethod(searchButton);
+
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
+
+        clickMethod(deleteButton);
+        clickMethod(secDeleteButton);
+
+    }
+
+    public void deleteItem1(String s) {
+
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
+
+        clickMethod(deleteButton);
+        clickMethod(secDeleteButton);
     }
 }
