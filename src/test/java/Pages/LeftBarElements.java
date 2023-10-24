@@ -54,6 +54,24 @@ public class LeftBarElements extends Parent{
     //**//
 
 
+    public WebElement getWebElement(String strElement){
+        switch (strElement){
+
+            case "navSetup": return this.navSetup;
+            case "chParameters": return this.chParameters;
+            case "navHumanResources": return this.navHumanResources;
+            case "chdHRSetup": return this.chdHRSetup;
+            case "chPositions": return this.chPositions;
+            case "chAttestations": return this.chAttestations;
+            case "chPositionCategories": return this.chPositionCategories;
+            case "chGradeLevels": return this.chGradeLevels;
+            case "chFields": return this.chFields;
+
+        }
+        return null;
+    }
+
+
 
     public WebElement getNavHumanResources() {
         return navHumanResources;
