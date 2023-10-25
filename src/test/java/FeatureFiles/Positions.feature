@@ -34,4 +34,3 @@ Feature: HR_Positions Functionality
       | deleteButton |
       | Tester Updated |
     Then Success message should be displayed
-
