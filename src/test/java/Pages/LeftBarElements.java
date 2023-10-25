@@ -66,7 +66,8 @@ public class LeftBarElements extends Parent{
             case "chPositionCategories": return this.chPositionCategories;
             case "chGradeLevels": return this.chGradeLevels;
             case "chFields": return this.chFields;
-
+            case "chNationalities": return this.chNationalities;
+            case "chDepartments": return this.chDepartments;
         }
         return null;
     }
