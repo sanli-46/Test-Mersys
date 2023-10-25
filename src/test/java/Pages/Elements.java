@@ -43,6 +43,8 @@ public class Elements extends Parent {
     private WebElement orderInput;
     @FindBy(css = "ms-save-button > button")
     private WebElement saveButton;
+    @FindBy(css = "button[aria-label='Close")
+    private WebElement XButton;
     @FindBy(xpath = "//input[@data-placeholder='Name']")
     private WebElement searchNameLabel;
     @FindBy(css = "//input[@data-placeholder='Description']")
@@ -64,6 +66,10 @@ public class Elements extends Parent {
     private WebElement codeInput;
 
 
+    public WebElement getXButton() {
+        return XButton;
+    }
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "plusButton": return this.plusButton;
@@ -78,7 +84,7 @@ public class Elements extends Parent {
             case "deleteButton": return this.deleteButton;
             case "secDeleteButton": return this.secDeleteButton;
             case "codeInput": return this.codeInput;
-
+            case "Xbutton":return this.XButton;
         }
         return null;
     }
