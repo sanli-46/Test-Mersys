@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class _05_HRSteps {
+public class GradeLvAndPositionsSteps {
     LeftBarElements ln = new LeftBarElements();
     Elements dc = new Elements();
 

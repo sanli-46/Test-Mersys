@@ -70,24 +70,6 @@ public class Elements extends Parent {
         return XButton;
     }
 
-    public WebElement getWebElement(String strElement) {
-        switch (strElement) {
-            case "plusButton": return this.plusButton;
-            case "saveButton": return this.saveButton;
-            case "nameInput": return this.nameInput;
-            case "shortNameInput": return this.shortNameInput;
-            case "orderInput": return this.orderInput;
-            case "editButton": return this.editButton;
-            case "searchButton": return this.searchButton;
-            case "searchNameLabel": return this.searchNameLabel;
-            case "successMessage": return this.successMessage;
-            case "deleteButton": return this.deleteButton;
-            case "secDeleteButton": return this.secDeleteButton;
-            case "codeInput": return this.codeInput;
-            case "Xbutton":return this.XButton;
-        }
-        return null;
-    }
 
     public WebElement getLoginUsername() {return loginUsername;
     }
@@ -154,6 +136,34 @@ public class Elements extends Parent {
 
     public WebElement getsuccessMessage() {return successMessage;
     }
+
+    public WebElement getSuccessMessage() {
+        return successMessage;
+    }
+
+    public WebElement getCodeInput() {
+        return codeInput;
+    }
+
+    public WebElement getWebElement(String strElement) {
+        switch (strElement) {
+            case "plusButton": return this.plusButton;
+            case "saveButton": return this.saveButton;
+            case "nameInput": return this.nameInput;
+            case "shortNameInput": return this.shortNameInput;
+            case "orderInput": return this.orderInput;
+            case "editButton": return this.editButton;
+            case "searchButton": return this.searchButton;
+            case "searchNameLabel": return this.searchNameLabel;
+            case "successMessage": return this.successMessage;
+            case "deleteButton": return this.deleteButton;
+            case "secDeleteButton": return this.secDeleteButton;
+            case "codeInput": return this.codeInput;
+            case "Xbutton":return this.XButton;
+        }
+        return null;
+    }
+
 
     public void deleteItem(String searchText) {
         sendKeysMethod(searchNameLabel, searchText);
