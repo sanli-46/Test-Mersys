@@ -23,7 +23,7 @@ Feature: AdminPanel Functionality
       And Click on the element in Dialog
       |nameInput|burak|
       And Click on the element in Dialog
-      |searchButton         |
+      |searchButton|
       And User sending the keys in Dialog
         |nameInput|burak123|
       And Click on the element in Dialog

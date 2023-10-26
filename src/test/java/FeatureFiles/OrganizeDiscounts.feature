@@ -17,7 +17,7 @@ Feature: AdminPanel Functionality
 
       | description    |  abc      |
       | integrationCode      | abc456 |
-      | priority     | 12 |
+      | priority | 12 |
 
     And Click on the element in Dialog
       | description    |
