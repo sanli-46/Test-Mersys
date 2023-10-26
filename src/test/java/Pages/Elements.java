@@ -13,8 +13,6 @@ public class Elements extends Parent {
         PageFactory.initElements(BaseDriver.getDriver(), this);
     }
 
-    //mat-form-field//input[@data-placeholder='Name']
-
     @FindBy(xpath = "//input[@formcontrolname='username']")
     private WebElement loginUsername;
     @FindBy(xpath = "//input[@formcontrolname='password']")
@@ -33,7 +31,7 @@ public class Elements extends Parent {
     private WebElement editButton;
     @FindBy(xpath = "(//ms-delete-button/button)[1]")
     private WebElement deleteButton;
-    @FindBy(xpath = "//button[@type='submit']") // delete'in deletesi.
+    @FindBy(xpath = "//button[@type='submit']") // delete in delete.
     private WebElement secDeleteButton;
     @FindBy(css = "ms-text-field[formcontrolname='name'] > input")
     private WebElement nameInput;
@@ -73,6 +71,13 @@ public class Elements extends Parent {
     private WebElement descriptionArea;
     @FindBy(xpath = "(//mat-option/mat-pseudo-checkbox)[3]")
     private WebElement documentStageSelect;
+    @FindBy(xpath = "(//mat-option/mat-pseudo-checkbox)[3]")
+    private WebElement description;
+    @FindBy(xpath = "(//mat-option/mat-pseudo-checkbox)[3]")
+    private WebElement integrationCode;
+    @FindBy(xpath = "(//mat-option/mat-pseudo-checkbox)[3]")
+    private WebElement priority;
+
 
     public WebElement getDocumentStageSelect() {
         return documentStageSelect;
@@ -234,6 +239,12 @@ public class Elements extends Parent {
                 return this.descriptionArea;
             case "documentStageSelect":
                 return this.documentStageSelect;
+            case "description2":
+                return this.description;
+            case "priority":
+                return this.priority;
+            case "integrationCode":
+                return this.integrationCode;
         }
         return null;
     }

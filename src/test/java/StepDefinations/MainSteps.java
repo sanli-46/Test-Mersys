@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class GradeLvAndPositionsSteps {
+public class MainSteps {
     LeftBarElements ln = new LeftBarElements();
     Elements dc = new Elements();
 
@@ -69,10 +69,5 @@ public class GradeLvAndPositionsSteps {
         for (int i = 0; i < delete.size(); i++) {
             dc.deleteItem1(delete.get(i));
         }
-    }
-
-    @And("Click on the element in the Dialog")
-    public void clickOnTheElementInTheDialog(DataTable dt) {
-        List<String> values = dt.asList();
     }
 }

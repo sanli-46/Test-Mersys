@@ -35,4 +35,4 @@ Feature: HR_PositionCategories Functionality
     And User delete the element from Dialog
       | deleteImageBtn |
       | HR Specialist  |
-    Then Success message should be displa
+    Then Success message should be displayed
