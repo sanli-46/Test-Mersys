@@ -47,9 +47,10 @@ public class GradeLvAndPositionsSteps {
             dc.sendKeysMethod(e, yazi);
         }
     }
+
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
-        dc.verifyContainsText(dc.getsuccessMessage(),"success");
+        dc.verifyContainsText(dc.getsuccessMessage(), "success");
     }
 
     @And("User delete the element from Dialog")
@@ -72,6 +73,6 @@ public class GradeLvAndPositionsSteps {
 
     @And("Click on the element in the Dialog")
     public void clickOnTheElementInTheDialog(DataTable dt) {
-            List<String> values = dt.asList();
+        List<String> values = dt.asList();
     }
 }
