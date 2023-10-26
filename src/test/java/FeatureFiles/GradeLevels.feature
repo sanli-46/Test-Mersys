@@ -5,17 +5,17 @@ Feature: GradeLevels Functionality
     When User enter valid login information and click login button
     Then User should login successfully
     And Click on the element in LeftNav
-      | navSetup        |
-      | chParameters    |
-      | chGradeLevels   |
+      | navSetup      |
+      | chParameters  |
+      | chGradeLevels |
 
   Scenario: Create Grade Levels
     And Click on the element in Dialog
-      | plusButton  |
+      | plusButton |
     And User sending the keys in Dialog
-      | nameInput       | 100        |
-      | shortNameInput  | 1          |
-      | orderInput      | 1          |
+      | nameInput      | 100 |
+      | shortNameInput | 1   |
+      | orderInput     | 1   |
 
 
     And Click on the element in Dialog
@@ -26,9 +26,9 @@ Feature: GradeLevels Functionality
     And Click on the element in Dialog
       | editButton |
     And User sending the keys in Dialog
-      | nameInput       | 100         |
-      | shortNameInput  | 5           |
-      | orderInput      | 1           |
+      | nameInput      | 100 |
+      | shortNameInput | 5   |
+      | orderInput     | 1   |
 
 
     And Click on the element in Dialog
@@ -38,7 +38,7 @@ Feature: GradeLevels Functionality
   Scenario: Delete Grade Levels
     And User Delete the element from Dialog
 
-      | deleteButton      |
-      | 100               |
+      | deleteButton |
+      | 100          |
 
     Then Success message should be displayed

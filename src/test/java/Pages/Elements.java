@@ -90,70 +90,92 @@ public class Elements extends Parent {
     }
 
 
-    public WebElement getLoginUsername() {return loginUsername;
+    public WebElement getLoginUsername() {
+        return loginUsername;
     }
 
-    public WebElement getLoginPassword() {return loginPassword;
+    public WebElement getLoginPassword() {
+        return loginPassword;
     }
 
-    public WebElement getLoginButton() {return loginButton;
+    public WebElement getLoginButton() {
+        return loginButton;
     }
 
-    public WebElement getHomepageAvatar() {return homepageAvatar;
+    public WebElement getHomepageAvatar() {
+        return homepageAvatar;
     }
 
-    public WebElement getPlusButton() {return plusButton;
+    public WebElement getPlusButton() {
+        return plusButton;
     }
 
-    public WebElement getRippleButton() {return rippleButton;
+    public WebElement getRippleButton() {
+        return rippleButton;
     }
 
-    public WebElement getSearchButton() {return searchButton;
+    public WebElement getSearchButton() {
+        return searchButton;
     }
 
-    public WebElement getEditButton() {return editButton;
+    public WebElement getEditButton() {
+        return editButton;
     }
 
-    public WebElement getDeleteButton() {return deleteButton;
+    public WebElement getDeleteButton() {
+        return deleteButton;
     }
 
-    public WebElement getSecDeleteButton() {return secDeleteButton;
+    public WebElement getSecDeleteButton() {
+        return secDeleteButton;
     }
 
-    public WebElement getNameInput() {return nameInput;
+    public WebElement getNameInput() {
+        return nameInput;
     }
 
-    public WebElement getShortNameInput() {return shortNameInput;
+    public WebElement getShortNameInput() {
+        return shortNameInput;
     }
 
-    public WebElement getOrderInput() {return orderInput;
+    public WebElement getOrderInput() {
+        return orderInput;
     }
 
-    public WebElement getSaveButton() {return saveButton;
+    public WebElement getSaveButton() {
+        return saveButton;
     }
 
-    public WebElement getSearchNameLabel() {return searchNameLabel;
+    public WebElement getSearchNameLabel() {
+        return searchNameLabel;
     }
 
-    public WebElement getSearchDescriptionLabel() {return searchDescriptionLabel;
+    public WebElement getSearchDescriptionLabel() {
+        return searchDescriptionLabel;
     }
 
-    public WebElement getSearchIntegrationCode() {return searchIntegrationCode;
+    public WebElement getSearchIntegrationCode() {
+        return searchIntegrationCode;
     }
 
-    public WebElement getSearchStageSelect() {return searchStageSelect;
+    public WebElement getSearchStageSelect() {
+        return searchStageSelect;
     }
 
-    public WebElement getSubjectCategoriesBox() {return subjectCategoriesBox;
+    public WebElement getSubjectCategoriesBox() {
+        return subjectCategoriesBox;
     }
 
-    public WebElement getPositionActiveButton() {return positionActiveButton;
+    public WebElement getPositionActiveButton() {
+        return positionActiveButton;
     }
 
-    public WebElement getPositionActiveButtonNGL() {return positionActiveButtonNGL;
+    public WebElement getPositionActiveButtonNGL() {
+        return positionActiveButtonNGL;
     }
 
-    public WebElement getsuccessMessage() {return successMessage;
+    public WebElement getsuccessMessage() {
+        return successMessage;
     }
 
     public WebElement getSuccessMessage() {
@@ -166,23 +188,40 @@ public class Elements extends Parent {
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
-            case "plusButton": return this.plusButton;
-            case "saveButton": return this.saveButton;
-            case "nameInput": return this.nameInput;
-            case "shortNameInput": return this.shortNameInput;
-            case "orderInput": return this.orderInput;
-            case "editButton": return this.editButton;
-            case "searchButton": return this.searchButton;
-            case "searchNameLabel": return this.searchNameLabel;
-            case "successMessage": return this.successMessage;
-            case "deleteButton": return this.deleteButton;
-            case "secDeleteButton": return this.secDeleteButton;
-            case "codeInput": return this.codeInput;
-            case "Xbutton":return this.XButton;
-            case "iban ":return this.iban;
-            case "bankSelect":return this.bankSelect;
-            case "EUR":return this.EUR;
-            case "intCode":return this.searchIntegrationCode;
+            case "plusButton":
+                return this.plusButton;
+            case "saveButton":
+                return this.saveButton;
+            case "nameInput":
+                return this.nameInput;
+            case "shortNameInput":
+                return this.shortNameInput;
+            case "orderInput":
+                return this.orderInput;
+            case "editButton":
+                return this.editButton;
+            case "searchButton":
+                return this.searchButton;
+            case "searchNameLabel":
+                return this.searchNameLabel;
+            case "successMessage":
+                return this.successMessage;
+            case "deleteButton":
+                return this.deleteButton;
+            case "secDeleteButton":
+                return this.secDeleteButton;
+            case "codeInput":
+                return this.codeInput;
+            case "Xbutton":
+                return this.XButton;
+            case "iban ":
+                return this.iban;
+            case "bankSelect":
+                return this.bankSelect;
+            case "EUR":
+                return this.EUR;
+            case "intCode":
+                return this.searchIntegrationCode;
         }
         return null;
     }
