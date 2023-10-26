@@ -163,6 +163,8 @@ public class LeftBarElements extends Parent {
                 return this.chSubjectCategories;
             case "bankAccount":
                 return this.chBankAccount;
+            case "documentTypes":
+                return this.chDocumentTypes;
         }
         return null;
     }
