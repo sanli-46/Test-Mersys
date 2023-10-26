@@ -63,10 +63,12 @@
  * 🍪 _Enes BÜKE_ --  **Tester**
  * 🍪 _Sinem YURDUSEVER_ -- **Tester**
  * 🍪 _Fatih GÜVENÇ_ -- **Tester**
+ * 🍪 _Burak Öztürk_ -- **Tester**
+ * 🍪 _Yigithan Düzgün_ -- **Tester**
 
 
 ## Communication 📫
- - 🔗 [Linkedln](https://www.linkedin.com/in/alperen-%C5%9Fanl%C4%B1)
+ - 🔗 [Linkedln]([https://www.linkedin.com/in/alperen-%C5%9Fanl%C4%B1](https://www.linkedin.com/in/alperen-%C5%9Fanl%C4%B1-a21142216/))
  - 📬 alperensanli.46@gmail.com
 
 ## **Lisence**  📎
