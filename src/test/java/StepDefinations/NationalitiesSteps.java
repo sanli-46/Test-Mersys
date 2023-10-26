@@ -10,20 +10,19 @@ public class NationalitiesSteps {
     Elements el = new Elements();
 
 
-
     @When("Nationalities add")
     public void nationalitiesAdd() {
         el.clickMethod(el.getPlusButton());
-        el.sendKeysMethod(el.getNameInput(),"Candan");
+        el.sendKeysMethod(el.getNameInput(), "Candan");
         el.clickMethod(el.getSaveButton());
     }
 
     @Then("Nationalities create")
     public void nationalitiesCreate() {
-        el.sendKeysMethod(el.getSearchNameLabel(),"Candan");
+        el.sendKeysMethod(el.getSearchNameLabel(), "Candan");
         el.clickMethod(el.getSearchButton());
         el.clickMethod(el.getEditButton());
-        el.sendKeysMethod(el.getNameInput(),"Candan2");
+        el.sendKeysMethod(el.getNameInput(), "Candan2");
         el.clickMethod(el.getSaveButton());
     }
 
@@ -39,7 +38,7 @@ public class NationalitiesSteps {
 
     @Then("Delete")
     public void nationalitiesDelete() {
-        el.sendKeysMethod(el.getSearchNameLabel(),"Candan");
+        el.sendKeysMethod(el.getSearchNameLabel(), "Candan");
         el.clickMethod(el.getSearchButton());
         el.clickMethod(el.getDeleteButton());
         el.clickMethod(el.getSecDeleteButton());

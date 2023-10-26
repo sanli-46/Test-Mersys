@@ -10,7 +10,8 @@ import io.cucumber.java.en.When;
 import java.util.ArrayList;
 
 public class LoginSteps {
-    Elements el=new Elements();
+    Elements el = new Elements();
+
     @Given("Navigate to Mersys")
     public void navigateToMersys() {
         BaseDriver.getDriver().get("https://test.mersys.io");
@@ -18,12 +19,12 @@ public class LoginSteps {
 
     @When("User enter invalid login information and click login button")
     public void userEnterInvalidLoginInformationAndClickLoginButton() {
-        ArrayList<ArrayList<String>> info= ExcelUtility.getData("src/test/java/ApachePOI/resources/LoginDataa3.xlsx","sheet1",2);
+        ArrayList<ArrayList<String>> info = ExcelUtility.getData("src/test/java/ApachePOI/resources/LoginDataa3.xlsx", "sheet1", 2);
 
-        for(ArrayList<String> table:info){
+        for (ArrayList<String> table : info) {
 
-            el.sendKeysMethod(el.getLoginUsername(),table.get(0));
-            el.sendKeysMethod(el.getLoginPassword(),table.get(1));
+            el.sendKeysMethod(el.getLoginUsername(), table.get(0));
+            el.sendKeysMethod(el.getLoginPassword(), table.get(1));
             el.clickMethod(el.getLoginButton());
         }
     }
@@ -36,7 +37,7 @@ public class LoginSteps {
     @When("User enter valid login information and click login button")
     public void userEnterValidLoginInformationAndClickLoginButton() {
 
-        ArrayList<ArrayList<String>> info=ExcelUtility.getData("src/test/resources/ValidLoginData.xlsx","sheet2",2);
+        ArrayList<ArrayList<String>> info = ExcelUtility.getData("src/test/resources/ValidLoginData.xlsx", "sheet2", 2);
 
         el.sendKeysMethod(el.getLoginUsername(), String.valueOf(info.get(0).get(0)));
         el.sendKeysMethod(el.getLoginPassword(), String.valueOf(info.get(0).get(1)));

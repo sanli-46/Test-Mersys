@@ -12,21 +12,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class ExcelUtility {
-    public static ArrayList<ArrayList<String>> getData(String path, String sheetName, int sutunSayisi){
-        ArrayList<ArrayList<String>> tablo=new ArrayList<>();
+    public static ArrayList<ArrayList<String>> getData(String path, String sheetName, int sutunSayisi) {
+        ArrayList<ArrayList<String>> tablo = new ArrayList<>();
 
-        Sheet sheet=null;
+        Sheet sheet = null;
         try {
-            FileInputStream inputStream=new FileInputStream(path);
+            FileInputStream inputStream = new FileInputStream(path);
             Workbook workbook = WorkbookFactory.create(inputStream);
-            sheet=workbook.getSheet(sheetName);
+            sheet = workbook.getSheet(sheetName);
         } catch (IOException e) {
-            System.out.println("e = " + e.getMessage());;
+            System.out.println("e = " + e.getMessage());
+            ;
         }
 
         for (int i = 0; i < ((org.apache.poi.ss.usermodel.Sheet) sheet).getPhysicalNumberOfRows(); i++) {  //her bir satırı
 
-            ArrayList<String> satir=new ArrayList<>();
+            ArrayList<String> satir = new ArrayList<>();
             for (int j = 0; j < sutunSayisi; j++) {  // sutun sayısı kadar dolas
                 satir.add(sheet.getRow(i).getCell(j).toString());
             }
@@ -67,9 +68,9 @@ public class ExcelUtility {
             }
         } else {
 
-            FileInputStream inputStream=null;
-            Workbook workbook=null;
-            Sheet sheet=null;
+            FileInputStream inputStream = null;
+            Workbook workbook = null;
+            Sheet sheet = null;
 
             try {
                 inputStream = new FileInputStream(path);
