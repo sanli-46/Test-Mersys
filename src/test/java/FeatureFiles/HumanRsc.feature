@@ -1,11 +1,38 @@
-Feature: Test Mersys
+Feature: HR_PositionCategories Functionality
 
   Background:
     Given Navigate to Mersys
     When User enter valid login information and click login button
     Then User should login successfully
+    And Click on the element in LeftNav
+      | navHumanResources    |
+      | chdHRSetup           |
+      | chPositionCategories |
 
-  Scenario: Add documentation
-    When Must add user documentation
-    Then Must be able to edit user documentation
-    And User should be able to delete documentation
+  Scenario: Create HR PositionCategories
+    And Click on the element in Dialog
+      | addButton |
+    And User sending the keys in Dialog
+      | nameInput | HR |
+    And Click on the element in Dialog
+      | saveButton |
+    Then Success message should be displayed
+
+  Scenario: Edit HR PositionCategories
+    And User sending the keys in Dialog
+      | searchInput | HR |
+    And Click on the element in Dialog
+      | searchButton |
+    And Click on the element in Dialog
+      | editButton |
+    And User sending the keys in Dialog
+      | nameInput | HR Specialist |
+    And Click on the element in Dialog
+      | saveButton |
+    Then Success message should be displayed
+
+  Scenario: Delete HR PositionCategories
+    And User delete the element from Dialog
+      | deleteImageBtn |
+      | HR Specialist  |
+    Then Success message should be displayed

@@ -11,16 +11,16 @@ Feature: HR_Attestations Functionality
 
   Scenario: Create HR Attestations
     And Click on the element in Dialog
-      | plusButton         |
+      | plusButton |
     And User sending the keys in Dialog
-      | nameInput | John  |
+      | nameInput | John |
     And Click on the element in Dialog
       | saveButton |
     Then Success message should be displayed
 
   Scenario: Edit HR Attestations
     And Click on the element in the Dialog
-      | John  |
+      | John |
     And Click on the element in Dialog
       | searchButton |
     And Click on the element in Dialog
@@ -34,5 +34,5 @@ Feature: HR_Attestations Functionality
   Scenario: Delete a HR Attestations
     And User delete the element from Dialog
       | deleteButton |
-      | John1 |
+      | John1        |
     Then Success message should be displayed

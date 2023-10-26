@@ -6,7 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Human {
+public class AttestationSteps {
     Elements dc = new Elements();
     LeftBarElements lb = new LeftBarElements();
 

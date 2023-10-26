@@ -11,7 +11,7 @@ Feature: HR_Positions Functionality
 
   Scenario: Create HR Positions
     And Click on the element in Dialog
-      | plusButton     |
+      | plusButton |
     And User sending the keys in Dialog
       | nameInput      | Tester |
       | shortNameInput | Team   |
@@ -31,6 +31,6 @@ Feature: HR_Positions Functionality
 
   Scenario: Delete a HR Position
     And User delete the element from Dialog
-      | deleteButton |
+      | deleteButton   |
       | Tester Updated |
     Then Success message should be displayed
