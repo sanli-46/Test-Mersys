@@ -64,7 +64,19 @@ public class Elements extends Parent {
     private WebElement successMessage;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='code' ]//input")
     private WebElement codeInput;
+    @FindBy(xpath ="//input[@data-placeholder='Integration Code'])[2]")
+    private WebElement integrationCode;
+    @FindBy(xpath ="//ms-integer-field[@formcontrolname='priority']/input")
+    private WebElement priority ;
 
+
+    public WebElement getPriority() {
+        return priority;
+    }
+
+    public WebElement getIntegrationCode() {
+        return integrationCode;
+    }
 
     public WebElement getXButton() {
         return XButton;
@@ -160,6 +172,8 @@ public class Elements extends Parent {
             case "secDeleteButton": return this.secDeleteButton;
             case "codeInput": return this.codeInput;
             case "Xbutton":return this.XButton;
+            case "integrationCode":return this.integrationCode;
+            case "priority":return this.priority;
         }
         return null;
     }
