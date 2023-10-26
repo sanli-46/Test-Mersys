@@ -59,7 +59,6 @@ public class Elements extends Parent {
     private WebElement positionActiveButton;
     @FindBy(xpath = "(//button[@role='switch'])[8]")
     private WebElement positionActiveButtonNGL;
-
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     private WebElement successMessage;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='code' ]//input")
@@ -68,6 +67,20 @@ public class Elements extends Parent {
     private WebElement bankSelect;
     @FindBy(xpath = "//input[@id='ms-text-field-2']")
     private WebElement iban;
+    @FindBy(xpath = "(//mat-option[@role='option'])[1]")
+    private WebElement EUR;
+    @FindBy(xpath = "//textarea[@formcontrolname='description']")
+    private WebElement descriptionArea;
+    @FindBy(xpath = "(//mat-option/mat-pseudo-checkbox)[3]")
+    private WebElement documentStageSelect;
+
+    public WebElement getDocumentStageSelect() {
+        return documentStageSelect;
+    }
+
+    public WebElement getDescriptionArea() {
+        return descriptionArea;
+    }
 
     public WebElement getBankSelect() {
         return bankSelect;
@@ -81,14 +94,9 @@ public class Elements extends Parent {
         return EUR;
     }
 
-    @FindBy(xpath = "(//mat-option[@role='option'])[1]")
-    private WebElement EUR;
-
-
     public WebElement getXButton() {
         return XButton;
     }
-
 
     public WebElement getLoginUsername() {
         return loginUsername;
@@ -222,6 +230,10 @@ public class Elements extends Parent {
                 return this.EUR;
             case "intCode":
                 return this.searchIntegrationCode;
+            case "description":
+                return this.descriptionArea;
+            case "documentStageSelect":
+                return this.documentStageSelect;
         }
         return null;
     }
