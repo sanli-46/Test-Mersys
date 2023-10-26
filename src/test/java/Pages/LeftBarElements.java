@@ -151,6 +151,7 @@ public class LeftBarElements extends Parent{
             case "education": return this.navEducations;
             case "edSetup": return this.chEdSetup;
             case "subjectCategories": return this.chSubjectCategories;
+            case "bankAccount":return this.chBankAccount;
         }
         return null;
     }

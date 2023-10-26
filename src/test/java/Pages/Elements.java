@@ -64,6 +64,25 @@ public class Elements extends Parent {
     private WebElement successMessage;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='code' ]//input")
     private WebElement codeInput;
+    @FindBy(xpath = "(//mat-select[@role='combobox'])[3]")
+    private WebElement bankSelect;
+    @FindBy(xpath = "//input[@id='ms-text-field-2']")
+    private WebElement iban;
+
+    public WebElement getBankSelect() {
+        return bankSelect;
+    }
+
+    public WebElement getIban() {
+        return iban;
+    }
+
+    public WebElement getEUR() {
+        return EUR;
+    }
+
+    @FindBy(xpath = "(//mat-option[@role='option'])[1]")
+    private WebElement EUR;
 
 
     public WebElement getXButton() {
@@ -160,6 +179,10 @@ public class Elements extends Parent {
             case "secDeleteButton": return this.secDeleteButton;
             case "codeInput": return this.codeInput;
             case "Xbutton":return this.XButton;
+            case "iban ":return this.iban;
+            case "bankSelect":return this.bankSelect;
+            case "EUR":return this.EUR;
+            case "intCode":return this.searchIntegrationCode;
         }
         return null;
     }
