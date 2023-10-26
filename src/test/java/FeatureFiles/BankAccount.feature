@@ -27,7 +27,7 @@ Feature: Test Mersys
 
   Scenario: Bank Account Edit
 
-    And Click on the element in the Dialog
+    And Click on the element in Dialog
       | editButton |
     And User sending the keys in Dialog
       | nameInput | 12123 |

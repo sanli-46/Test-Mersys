@@ -5,33 +5,35 @@ Feature: AdminPanel Functionality
     When User enter valid login information and click login button
     Then User should login successfully
     And Click on the element in LeftNav
-      | navSetup |
+      | navSetup      |
       | navParameters |
       | navFields     |
+
   Scenario: Create AdminPanel
     And Click on the element in Dialog
       | addButton |
     And User sending the keys in Dialog
-      | nameInput | burak      |
-      | codeInput | 06       |
+      | nameInput | burak |
+      | codeInput | 06    |
     And Click on the element in Dialog
       | saveButton |
     Then Success message should be displayed
 
 
-    Scenario: Edit admin panel
-      And Click on the element in Dialog
-      |nameInput|burak|
-      And Click on the element in Dialog
-      |searchButton|
-      And User sending the keys in Dialog
-        |nameInput|burak123|
-      And Click on the element in Dialog
-      |saveButton|
-      When Click on the element in Dialog
-      |editButton|
+  Scenario: Edit admin panel
+    And Click on the element in Dialog
+      | nameInput | burak |
+    And Click on the element in Dialog
+      | searchButton |
+    And User sending the keys in Dialog
+      | nameInput | burak123 |
+    And Click on the element in Dialog
+      | saveButton |
+    When Click on the element in Dialog
+      | editButton |
+    Then Success message should be displayed
 
-    Scenario: Delete Admin Panel
-      And User delete the element from Dialog
-      |deleteImageBtn|
-      |     burak123         |
+  Scenario: Delete Admin Panel
+    And User delete the element from Dialog
+      | burak123 |
+    And Success message should be displayed
